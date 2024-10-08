@@ -2,15 +2,19 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 const mongoose = require('mongoose');
+const env = require('dotenv');
 const bodyparser = require("body-parser");
 
 const app = express();
 const port = 80;
 
+// To use .env file
+env.config();
+
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect("mongodb+srv://osoworldS:MianSuffian74@cluster0.rg6n4.mongodb.net/?retryWrites=true&w=majority&appName=DanceContact");
+  await mongoose.connect(process.env.MONGODB_LINK);
 }
 
 
