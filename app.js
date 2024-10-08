@@ -6,7 +6,7 @@ const env = require('dotenv');
 const bodyparser = require("body-parser");
 
 const app = express();
-const port = 80;
+const port = process.env.PORT || 3000;  // Use port from environment or default to 3000
 
 // To use .env file
 env.config();
