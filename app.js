@@ -17,6 +17,7 @@ async function main() {
   await mongoose.connect(process.env.MONGODB_LINK);
 }
 
+console.log("MongoDB Connection: ", process.env.MONGODB_LINK);
 
  //THIS IS JUST TO CHECK FOR CONNECTION
 var db = mongoose.connection;
