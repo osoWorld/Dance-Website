@@ -54,7 +54,7 @@
 }
 
 #introSection{
-    background: center/cover no-repeat url(../static/background1.jpg);
+    background: center/cover no-repeat url(/static/background1.jpg);
     height: 425px;
     background-color: red;
     color: white;
